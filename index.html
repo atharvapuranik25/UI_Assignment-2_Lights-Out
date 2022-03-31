@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lights Out!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+  <script>
+    $( function() {
+    var availableTags = [
+      "Stephen King",
+      "JK Rowling",
+      "Rick Riordan",
+      "Dan Brown",
+      "Stanley Kubrick",
+      "David Yates",
+      "Ron Howard",
+      "Chris Columbus",
+      "Christopher Columbus",
+      "Stanley Kubrick",
+      "Emmanuel Lubezki"
+    ];
+    $("#search").autocomplete({
+      source: availableTags
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $("#button1").click(function(){
+        $("#bg").css("background-color", "#f1f2f3");
+        $("#text").css("color", "#010101");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#button2").click(function(){
+        $("#bg").css("background-color", "#1a1a1a");
+        $("#text").css("color", "white");
+      });
+    });
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #010101;">
+  <div class="container-fluid row">
+    <div class="col-xxl-7 col-xl-6 col-lg-5 col-md-4 row">
+      <div class="d-inline col-11">
+      <img id="button1" src="logo.jpg" class="navbar-brand d-inline" style="width:50px; filter:invert(100%);">
+      <h3 id="button2" class="text-white d-inline">Lights Out!</h3>
+      </div>
+      <div class="d-inline col-1 mt-3">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse col-xxl-5 col-xl-6 col-lg-7 col-md-8" id="mynavbar">
+      <form class="d-flex">
+        <input id="search" class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-danger" type="button">Search</button>
+      </form>
+      <ul class="navbar-nav me-auto ms-3">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">New Post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">New Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Username</a>
+        </li>
+        <li>
+          <a class="nav-link d-md-none" href="javascript:void(0)">Events</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="bg" style="background-color: #1a1a1a;">
+
+<div id="text" class="container" style="color:white;">
+  <div class="row">
+    <div class="col-md-3 d-none d-sm-none d-md-block">
+      <h2 class="mt-5">Events</h2>
+
+      <h5 class="mt-4">Writers Assemble</h5>
+      <img src="events/writers_event.png" class="rounded-3" style="width:100%;">
+      <p>Submit your best collaborative science fiction work here.</p>
+      <p>Jury: Stanley Kubrick and Steven Spielberg</p>
+      <p>Deadline: 31st January 2022</p>
+
+      <h5 class="mt-5">Directors Workshop</h5>
+      <img src="events/directors_workshop.png" class="rounded-3" style="width:100%;">
+      <p>A talk with Martin Scorcese where he will be sharing some details about his process while making The Irishmen. Trust us, you don't want to miss this one.</p>
+      <p>Speaker: Martin Scorcese</p>
+      <p>Date & Time: 5th Feruary 2022, 9:00 AM</p>
+
+      <h3 class="mt-5">Learn the Art of Filmmaking</h3>
+      <p>Here are some links to learn and improve you filmmaking skills</p>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link">Writing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Direction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Cinematography</a>
+        </li>
+      </ul>
+      <hr class="d-sm-none">
+    </div>
+
+    <div class="col-md-9">
+      <h2 class="mt-5">Feed</h2>
+
+      <video class="card-img-top rounded-3" width="100%; height: auto;" autoplay controls muted>
+        <source src="Users/Directors/DY/Fantastic Beasts and Where to Find Them - Teaser Trailer [HD].mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Fantastic Beasts and Where to Find Them</h3>
+      <p>Hey there folks... The new fantastic beasts, the last in the trilogy will be coming out this year! As the journey of Newt Scamander comes to an end, here's a reminder of where it all started. And thank you for comeing along with me on this journey through the wizarding world.</p>
+      <img src="Users/Directors/DY/David-Yates.jpg" class="rounded-circle d-inline" style="width:40px; height:40px;">
+      <p class="ms-2 d-inline">David Yates</p>
+      <a href="#" class="btn btn-danger ms-2">Upvote</a>
+
+      <br><br>
+
+      <video class="mt-5 card-img-top rounded-3" width="100%; height: auto;" autoplay controls muted>
+        <source src="Users/Directors/CN/Interstellar - Trailer - Official Warner Bros. UK.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>Interstellar</h3>
+      <p>Here's the trailer for my movie Interstellar. Had a lot of fun working with Matthew on this one. A stellar actor along with the supporting cast and all the crew members. Hope you enjoy it. Peace Out.</p>
+      <img src="Users/Directors/CN/nolan.jpg" class="rounded-circle d-inline" style="width:40px; height:40px;">
+      <p class="ms-2 d-inline">Christopher Nolan</p>
+      <a href="#" class="btn btn-danger ms-2">Upvote</a>
+
+      <iframe class="mt-5 rounded-3" src="Users/Writers/RR/percy jackson 1 - the lightning thief - riordan_ rick.pdf" width="100%" height="500px"></iframe>
+      <h3>The Lightning Thief</h3>
+      <p>Hey Everyone!!! I am excited and eager to announce that the Percy Jackson Books (after a failed attempt to make them into movies) are being adapted into a web show by Disney. The cast will be annouced in a few days. Until then, go revise what happened in the first book... haha</p>
+      <img src="Users/Writers/RR/rick-twitter.jpg" class="rounded-circle d-inline" style="width:40px; height:40px;">
+      <p class="ms-2 d-inline">Rick Riordan</p>
+      <a href="#" class="btn btn-danger ms-2">Upvote</a>
+      
+
+      <video class="mt-5 card-img-top rounded-3" width="100%; height: auto;" autoplay controls muted>
+        <source src="Users/Directors/RH/THE DA VINCI CODE - Official Trailer [2006] (HD).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>The Da Vinci Code</h3>
+      <p>Symbologist Robert Langdon travels from Paris to London to unravel a bizarre murder. Accompanied by a cryptographer, he soon comes across a religious enigma protected by an age-old secret society.</p>
+      <img src="Users/Directors/RH/ron_howard.jpg" class="rounded-circle d-inline" style="width:40px; height:40px;">
+      <p class="ms-2 d-inline">Ron Howard</p>
+      <a href="#" class="btn btn-danger ms-2">Upvote</a>
+
+      <video class="mt-5 card-img-top rounded-3" width="100%; height: auto;" autoplay controls muted>
+        <source src="Users/Directors/SK/2001_ A SPACE ODYSSEY - Trailer.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>2001: A Space Odyssey</h3>
+      <p>After discovering a monolith on the lunar surface, the Discovery One and its revolutionary supercomputer set out to unravel its mysterious origin.</p>
+      <img src="Users/Directors/SK/skub.jpg" class="rounded-circle d-inline" style="width:40px; height:40px;">
+      <p class="ms-2 d-inline">Stanley Kubrick</p>
+      <a href="#" class="btn btn-danger ms-2">Upvote</a>
+
+      <iframe class="mt-5 rounded-3" src="Users/Writers/SK/stephen-king-IT-book-pdf.pdf" width="100%" height="500px"></iframe>
+      <h3>IT</h3>
+      <p>Seven helpless and bullied children are forced to face their worst nightmares when Pennywise, a shape-shifting clown, reappears. The clown, an ancient evil torments children before feeding on them.</p>
+      <img src="Users/Writers/SK/img.jpg" class="rounded-circle d-inline" style="width:40px; height:40px;">
+      <p class="ms-2 d-inline">Stephen King</p>
+      <a href="#" class="btn btn-danger ms-2">Upvote</a>
+
+      <video class="mt-5 card-img-top rounded-3" width="100%; height: auto;" autoplay controls muted>
+        <source src="Users/Cinematographer/emanuel/Bear attack scene from The Revenant.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3>The Revenant</h3>
+      <p>Hugh Glass, a legendary frontiersman, is severely injured in a bear attack and is abandoned by his hunting crew. He uses his skills to survive and take revenge on his companion who betrayed him.</p>
+      <img src="Users/Cinematographer/emanuel/emmanuel-lubezki.jpg" class="rounded-circle d-inline" style="width:40px; height:40px;">
+      <p class="ms-2 d-inline">Emmanuel Lubezki</p>
+      <a href="#" class="btn btn-danger ms-2">Upvote</a>
+      
+      <br><br>
+
+  </div>
+</div>
+</div>
+</div>
+
+<div class="p-4 text-secondary text-center" style="background-color: #010101;">
+  <div class="row">
+    <div class="col-md-3">
+      <p>Privacy Policy</p>
+    </div>
+    <div class="col-md-3">
+      <p>Legal</p>
+    </div>
+    <div class="col-md-3">
+      <p>Sitemap</p>
+    </div>
+    <div class="col-md-3">
+      <p>© 2022 Lights Out. All Rights Reserved.</p>
+    </div>
+  </div>
+  <br><br>
+</div>
+
+</body>
+</html>
